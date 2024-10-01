@@ -1,0 +1,179 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f0f2; /* Light blue background */
+    color: #333;
+    padding: 20px;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: #3498db; /* Bright blue for the title */
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger font size for the title */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header */
+thead th {
+    background-color: #3498db; /* Bright blue */
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2980b9;
+    position: sticky;
+    top: 0;
+}
+
+thead th:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Table body */
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+    color: #2c3e50; /* Darker text color for readability */
+}
+
+/* Colorful text for rows */
+tbody tr:nth-child(odd) td {
+    color: #e74c3c; /* Red text for odd rows */
+}
+
+tbody tr:nth-child(even) td {
+    color: #27ae60; /* Green text for even rows */
+}
+
+/* Row hover effect */
+tbody tr:hover {
+    background-color: #f2f2f2; /* Light gray */
+    cursor: pointer;
+}
+
+/* Button styling */
+button {
+    padding: 6px 12px;
+    background-color: #2ecc71; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Edit button specifically */
+button.edit-btn {
+    background-color: #e67e22; /* Orange */
+}
+
+button.edit-btn:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+/* Modal overlay */
+#editModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modal close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Form styling in modal */
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Save button */
+#save-changes {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db; /* Bright blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#save-changes:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

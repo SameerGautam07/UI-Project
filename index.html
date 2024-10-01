@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Invoice Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Chemical Invoices</h1>
+
+    <table id="chemical-table">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">ID</th>
+                <th onclick="sortTable(1)">Chemical Name</th>
+                <th onclick="sortTable(2)">Vendor</th>
+                <th onclick="sortTable(3)">Density</th>
+                <th onclick="sortTable(4)">Viscosity</th>
+                <th onclick="sortTable(5)">Packaging</th>
+                <th onclick="sortTable(6)">Pack Size</th>
+                <th onclick="sortTable(7)">Unit</th>
+                <th onclick="sortTable(8)">Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="chemical-table-body">
+            <!-- Table rows will be dynamically generated here -->
+        </tbody>
+    </table>
+
+    <!-- Modal for editing row data -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Chemical</h2>
+            <label>Chemical Name:</label>
+            <input type="text" id="chemicalName"><br>
+            <label>Vendor:</label>
+            <input type="text" id="vendor"><br>
+            <label>Density:</label>
+            <input type="number" id="density"><br>
+            <label>Viscosity:</label>
+            <input type="number" id="viscosity"><br>
+            <label>Packaging:</label>
+            <input type="text" id="packaging"><br>
+            <label>Pack Size:</label>
+            <input type="number" id="packSize"><br>
+            <label>Unit:</label>
+            <input type="text" id="unit"><br>
+            <label>Quantity:</label>
+            <input type="number" id="quantity"><br>
+            <button id="save-changes">Save</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
